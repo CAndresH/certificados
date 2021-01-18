@@ -22,8 +22,8 @@ function MultiSigWallet() {
 
   
 
-      <h3>Balance: {state.balance} wei</h3>
-      <DepositForm />
+      {/* <h3>Balance: {state.balance} wei</h3>
+      <DepositForm /> */}
       <h3>Involucrados</h3>
       <ul>
         {state.owners.map((owner, i) => (
