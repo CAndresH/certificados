@@ -2,6 +2,9 @@
   "name": "multi-sig-wallet",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "12.x"
+  }
   "dependencies": {
     "@testing-library/jest-dom": "^5.7.0",
     "@testing-library/react": "^10.0.4",
