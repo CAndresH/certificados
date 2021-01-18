@@ -30,7 +30,11 @@ export async function get(web3: Web3, account: string): Promise<GetResponse> {
 
   const multiSig = await MultiSigWallet.deployed();
 
+  console.log("multisig", multiSig)
+
   const balance = await web3.eth.getBalance(multiSig.address);
+
+  console.log("balance----", balance)
   const owners = await multiSig.getOwners();
   const numConfirmationsRequired = await multiSig.numConfirmationsRequired();
   const transactionCount = await multiSig.getTransactionCount();
@@ -210,19 +214,6 @@ interface RevokeConfirmation {
   };
 }
 
-/*
-Exercise
-Define an interface ExecuteTransaction.
-The shape of the interface should be the following:
-
-{
-  event: "ExecuteTransaction";
-  returnValues: {
-    owner: string;
-    txIndex: string;
-  };
-}
-*/
 interface ExecuteTransaction {
   event: "ExecuteTransaction";
   returnValues: {

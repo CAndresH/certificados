@@ -5,6 +5,7 @@ import { Button, Form } from "semantic-ui-react";
 import { useWeb3Context } from "../contexts/Web3";
 import useAsync from "../components/useAsync";
 import { deposit } from "../api/multi-sig-wallet";
+import { Grid, Image } from 'semantic-ui-react'
 
 interface Props {}
 

@@ -8,6 +8,7 @@ import MultiSigWallet from "./MultiSigWallet";
 import Footer from "./Footer";
 import Network from "./Network";
 
+
 function App() {
   const {
     state: { account, netId },
@@ -30,11 +31,12 @@ function App() {
   return (
     <div className="App">
       <div className="App-main">
-        <h1>Multi Sig Wallet</h1>
+        <h1>Ejemplo de sistema MultiFirma de Contratos basado en Blockchain</h1>
+        {console.log("la cuenta----->",account)}
         {account ? (
           <>
             {netId !== 0 && <Network netId={netId} />}
-            <div>Account: {account}</div>
+            <div>Cuenta de Usuario actual: {account}</div>
             <MultiSigWallet />
           </>
         ) : (
@@ -42,7 +44,7 @@ function App() {
             {error ? (
               <Message error>{error.message}</Message>
             ) : (
-              <Message warning>Metamask is not connected</Message>
+              <Message warning>Conectese a su Wallet Metamask para leer el contrato y firmarlo</Message>
             )}
             <Button
               color="green"
@@ -50,7 +52,7 @@ function App() {
               disabled={pending}
               loading={pending}
             >
-              Connect to Metamask
+              Conectar a Metamask
             </Button>
           </>
         )}

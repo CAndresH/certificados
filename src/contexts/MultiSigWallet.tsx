@@ -37,7 +37,6 @@ const INITIAL_STATE: State = {
   transactionCount: 0,
   transactions: [],
 };
-
 const SET = "SET";
 const UPDATE_BALANCE = "UPDATE_BALANCE";
 const ADD_TX = "ADD_TX";
